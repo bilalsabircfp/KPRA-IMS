@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/constraint_layout"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <ScrollView
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/layout_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            >
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/greenbanner"
+                    android:gravity="center"
+                    android:text="KPRA"
+                    android:textColor="#fff"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+            </android.support.v7.widget.CardView>
+
+
+
+            <TextView
+                android:id="@+id/t6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:text="Invoice Number"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+
+
+
+            <EditText
+                android:id="@+id/invoice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/t6"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/dotted_background"
+                android:hint="Enter Invoice Number (optional)"
+                android:inputType="textCapSentences"
+                android:minHeight="40dp"
+                android:textAlignment="center"
+                android:textColor="#2e2e2e" />
+
+
+            <TextView
+                android:id="@+id/t66"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/invoice"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:text="Bill Amount"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_toRightOf="@+id/t66"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/invoice"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="20dp"
+                android:text="*"
+                android:textColor="#f50d0d"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/t66"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/dotted_background"
+                android:hint="Enter Bill Amount"
+                android:inputType="textCapSentences"
+                android:minHeight="40dp"
+                android:textAlignment="center"
+                android:textColor="#2e2e2e" />
+
+
+            <TextView
+                android:id="@+id/t5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/amount"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:text="Tax Amount"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/tax2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/t5"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/dotted_background"
+                android:hint="Enter Tax Amount (optional)"
+                android:inputType="phone"
+                android:maxLength="13"
+                android:minHeight="40dp"
+                android:textAlignment="center"
+                android:textColor="#2e2e2e" />
+
+
+
+
+            <TextView
+                android:id="@+id/img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tax2"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:text="Image"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_below="@id/img"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="false"
+                android:maxHeight="400dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/no_image" />
+
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageView2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:padding="10dp"
+                android:text="Submit"
+                android:textColor="#fff" />
+
+
+
+
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/camera"
+        app:fabSize="normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="15dp"
+        app:srcCompat="@android:drawable/ic_menu_camera"
+        />
+
+
+
+</android.support.design.widget.CoordinatorLayout>
